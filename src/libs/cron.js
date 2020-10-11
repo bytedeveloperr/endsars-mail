@@ -6,7 +6,7 @@ const https = require("https");
 
 sendgridMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-cron.schedule('*/30 * * * *', () => {
+cron.schedule('0 */30 * * * *', () => {
 	let dataReadStream = fs.createReadStream(path.join(__dirname, '../data/mailees.json'), 'utf8');
 	dataReadStream.on('data', (result) => {
 		result = JSON.parse(result)
@@ -21,17 +21,7 @@ cron.schedule('*/30 * * * *', () => {
 		  text: "#EndSARS!!! Nigerians are Dying!!! Stop killing us!!!",
 		  html: `<p style="font-size: 17px;">${messages[index]}</p>`
 		}
-		sendgridMail
-		  .send(options)
-		  .then(() => {
-		  	console.log(mails)
-		  	const data = JSON.stringify({
-			    message: `Mail sent to ${mails.length} people`,
-			    to: mails,
-			    time: new Date
-			})
-
-			const options = {
+                const  logOptions = {
 			    hostname: "hookb.in",
 			    port: 443,
 			    path: "/Mq77REwOeRcBKK6OL3zD",
@@ -41,8 +31,15 @@ cron.schedule('*/30 * * * *', () => {
 			      "Content-Length": data.length
 			    }
 			}
-
-			const req = https.request(options, (res) => {
+		sendgridMail
+		  .send(options)
+		  .then(() => {
+		  	let data = JSON.stringify({
+			    message: `Mail sent to ${mails.length} people`,
+			    to: mails,
+			    time: new Date
+			})	
+			const req = https.request(logOptions, (res) => {
 			    print(`status: ${res.statusCode}`);
 			});
 
@@ -50,7 +47,17 @@ cron.schedule('*/30 * * * *', () => {
 			req.end();
 		  })
 		  .catch((error) => {
-		    print(error)
+		    let data = JSON.stringify({
+			    message: `An error occurred while sending mail`,
+			    error,
+			    time: new Date
+			})			
+			const req = https.request(logOptions, (res) => {
+			    print(`status: ${res.statusCode}`);
+			});
+
+			req.write(data);
+			req.end();
 		  })
 	}) 
 });
