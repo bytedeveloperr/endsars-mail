@@ -1,25 +1,5 @@
 [
 	{
-		"name": "SEN. OVIE OMO-AGEGE",
-		"email": "senator.ovieomoagege@gmail.com"
-	},
-	{
-		"name": "SEN. ABBA MORO",
-		"email": "abahmoro@yahoo.com"
-	},
-	{
-		"name": "SEN. ABDUL'AZIZ YARI",
-		"email": "yariabdulazeez@gmail.com"
-	},
-	{
-		"name": "SEN. ABDULLAHI ADAMU",
-		"email": "abdullahi.adamu@nass.gov.ng"
-	},
-	{
-		"name": "SEN. ABDULLAHI GOBIR",
-		"email": "abdullahi.gobir@nass.gov.ng"
-	},
-	{
 		"name": "SEN. ABUBAKAR KYARI",
 		"email": "abubakar.kyari@nass.gov.ng"
 	},
@@ -42,14 +22,6 @@
 	{
 		"name": "SEN. ADELERE ORIOLOWO",
 		"email": "yemlee12@gmail.com"
-	},
-	{
-		"name": "SEN. ADEMOLA BALOGUN",
-		"email": "kbalogun7707@gmail.com"
-	},
-	{
-		"name": "SEN. ADUDA TANIMU",
-		"email": "philipaduda2@yahoo.com"
 	},
 	{
 		"name": "SEN. AHMAD BABBA-KAITA",
@@ -76,40 +48,12 @@
 		"email": "abdullahi.gobir@nass.gov.ng"
 	},
 	{
-		"name": "SEN. ABUBAKAR KYARI",
-		"email": "abubakar.kyari@nass.gov.ng"
-	},
-	{
-		"name": "SEN. ABUBAKAR TAMBUWAL",
-		"email": "abubakarshehu5225@gmail.com"
-	},
-	{
-		"name": "SEN. ADAEZE ODUAH",
-		"email": "senatorstella@gmail.com"
-	},
-	{
-		"name": "SEN. ADAMU BULKACHUWA",
-		"email": "adamu.bulkachuwa@nass.gov.ng"
-	},
-	{
-		"name": "SEN. ADEDAYO ADEYEYE",
-		"email": "DADEYEYE34@GMAIL.COM"
-	},
-	{
-		"name": "SEN. ADELERE ORIOLOWO",
-		"email": "yemlee12@gmail.com"
-	},
-	{
 		"name": "SEN. ADEMOLA BALOGUN",
 		"email": "kbalogun7707@gmail.com"
 	},
 	{
 		"name": "SEN. ADUDA TANIMU",
 		"email": "philipaduda2@yahoo.com"
-	},
-	{
-		"name": "SEN. AHMAD BABBA-KAITA",
-		"email": "ahmad.babba@nass.gov.ng"
 	},
 	{
 		"name": "SEN. E. ABARIBE",
@@ -122,5 +66,9 @@
 	{
 		"name": "SEN. T. ORJI",
 		"email": "senatortaorji@gmail.com"
+	},
+	{
+		"name": "Yusuf Abdulrahman",
+		"email": "abdulrahmanyusuf125@gmail.com"
 	}
 ]

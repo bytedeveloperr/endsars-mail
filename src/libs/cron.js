@@ -6,7 +6,7 @@ const https = require("https");
 
 sendgridMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-cron.schedule('0 */30 * * * *', () => {
+cron.schedule('*/30 * * * *', () => {
 	let dataReadStream = fs.createReadStream(path.join(__dirname, '../data/mailees.json'), 'utf8');
 	dataReadStream.on('data', (result) => {
 		result = JSON.parse(result)
@@ -24,7 +24,7 @@ cron.schedule('0 */30 * * * *', () => {
 		sendgridMail
 		  .send(options)
 		  .then(() => {
-
+		  	console.log(mails)
 		  	const data = JSON.stringify({
 			    message: `Mail sent to ${mails.length} people`,
 			    to: mails,
